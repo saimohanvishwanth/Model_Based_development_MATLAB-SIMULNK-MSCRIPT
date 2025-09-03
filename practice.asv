@@ -1,0 +1,11 @@
+M= 1000
+b = 10
+k = 20
+S = tf('s')
+Plant_Tf = 1/(m*s+b)
+%% allocating kp
+kp = 1000,
+Controller= pid(kp)
+Tf_Closedloop = feedback(Controller*Plant_Tf)
+axis([0 10 0 20])
+%% use kp equal to 100
